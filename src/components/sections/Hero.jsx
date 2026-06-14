@@ -1,25 +1,4 @@
-﻿import aboutMeImage from '../../assets/images/About_me.png'
-
-const heroSidePanels = [
-  {
-    side: 'left',
-    title: 'Sport & Lifestyle',
-    items: [
-      { icon: '🏃', label: 'Running' },
-      { icon: '🥋', label: 'Jiu-Jitsu' },
-      { icon: '📜', label: 'History' },
-    ],
-  },
-  {
-    side: 'right',
-    title: 'Tech & Code',
-    items: [
-      { icon: '💻', label: 'Programming' },
-      { icon: '🔌', label: 'Electronics' },
-      { icon: '🏠', label: 'Smart Home' },
-    ],
-  },
-]
+import aboutMeImage from '../../assets/images/About_me.png'
 
 function HeroSidePanel({ panel, className = '' }) {
   return (
@@ -58,9 +37,9 @@ function Hero({ content }) {
       <div className="absolute inset-x-0 bottom-0 h-px bg-cyan-300/30" />
 
       <div className="relative z-[1] mx-auto flex w-full max-w-[90rem] flex-col items-center justify-center text-center">
-        <h1 className="max-w-6xl text-5xl font-black tracking-tight text-zinc-50 sm:text-7xl lg:text-[clamp(5.75rem,8vw,8rem)] lg:leading-[0.95]">
+        <h1 className="max-w-full whitespace-nowrap text-[clamp(2.65rem,10vw,4.5rem)] font-black leading-[0.95] tracking-tight text-zinc-50 lg:text-[clamp(4.75rem,6.3vw,7rem)] xl:text-[clamp(5.25rem,6.7vw,7.75rem)]">
           <span>{content.prefix} </span>
-          <span className="relative inline-block whitespace-nowrap px-4 py-2 sm:px-6">
+          <span className="relative inline-block whitespace-nowrap px-2 py-2 sm:px-6">
             {content.highlight}
             <svg
               aria-hidden="true"
@@ -100,29 +79,37 @@ function Hero({ content }) {
                 {content.description}
               </p>
 
-              <a
-                className="mt-7 inline-flex items-center justify-center rounded-full border border-cyan-300/50 px-6 py-3 text-sm font-bold text-zinc-50 shadow-[0_0_24px_rgba(56,189,248,0.22)] transition hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-cyan-300/10 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-[#050a2d]"
-                href="#contact"
-              >
-                {content.cta}
-              </a>
+              <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row md:items-start">
+                <a
+                  className="inline-flex items-center justify-center rounded-full border border-cyan-300/50 px-6 py-3 text-sm font-bold text-zinc-50 shadow-[0_0_24px_rgba(56,189,248,0.22)] transition hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-cyan-300/10 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-[#050a2d]"
+                  href="#contact"
+                >
+                  {content.cta}
+                </a>
+                <a
+                  className="inline-flex items-center justify-center rounded-full border border-cyan-300/50 px-6 py-3 text-sm font-bold text-zinc-50 shadow-[0_0_24px_rgba(56,189,248,0.22)] transition hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-cyan-300/10 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-[#050a2d]"
+                  href="#projects"
+                >
+                  {content.projectsCta}
+                </a>
+              </div>
             </div>
           </div>
 
           <HeroSidePanel
-            panel={heroSidePanels[0]}
+            panel={content.sidePanels[0]}
             className="md:col-span-1 xl:col-span-1 xl:col-start-1 xl:row-start-1 xl:self-center xl:translate-y-4"
           />
 
           <HeroSidePanel
-            panel={heroSidePanels[1]}
+            panel={content.sidePanels[1]}
             className="md:col-span-1 xl:col-span-1 xl:col-start-3 xl:row-start-1 xl:self-center xl:translate-y-4"
           />
         </div>
 
         <a
           aria-label="Scroll to about section"
-          className="absolute bottom-2 left-1/2 hidden -translate-x-1/2 rounded-full border border-cyan-300/30 px-3 py-5 text-cyan-100/80 transition hover:border-cyan-200 sm:block"
+          className="absolute bottom-2 left-1/2 hidden -translate-x-1/2 rounded-full border border-cyan-300/30 px-3 py-5 text-cyan-100/80 transition hover:border-cyan-200 xl:block"
           href="#about"
         >
           <span className="block h-6 w-px animate-bounce bg-cyan-200" />
@@ -133,4 +120,5 @@ function Hero({ content }) {
 }
 
 export default Hero
+
 

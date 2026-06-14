@@ -1,17 +1,21 @@
+import { cx, theme } from '../../content/theme'
 import Section from '../ui/Section'
 
-function Skills({ content }) {
+function Skills({ content, tone }) {
   return (
-    <Section id="skills" eyebrow={content.eyebrow} title={content.title}>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4">
-        {content.items.map((skill) => (
-          <div
-            className="rounded-lg border border-zinc-200 bg-white p-6 text-sm font-semibold text-zinc-800 shadow-sm transition hover:-translate-y-1 hover:border-cyan-500 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-100"
-            key={skill}
-          >
-            <span className="mb-4 block h-1 w-10 rounded-full bg-cyan-400" />
-            {skill}
-          </div>
+    <Section id="skills" title={content.title} tone={tone}>
+      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        {content.categories.map((category) => (
+          <article className={theme.components.skillsCategoryCard} key={category.title}>
+            <h3 className={theme.components.skillsCategoryHeader}>{category.title}</h3>
+            <ul className={theme.components.skillsCategoryList}>
+              {category.items.map((skill) => (
+                <li className={cx(theme.components.skillsCategoryItem, 'list-none')} key={skill}>
+                  {skill}
+                </li>
+              ))}
+            </ul>
+          </article>
         ))}
       </div>
     </Section>

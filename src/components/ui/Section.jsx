@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
+import { cx, theme } from '../../content/theme'
 
-function Section({ id, title, eyebrow, children }) {
+function Section({ id, title, children, tone = 1 }) {
   const sectionRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
+  const toneClassName = theme.sectionTones[tone] ?? theme.sectionTones[1]
 
   useEffect(() => {
     const section = sectionRef.current
@@ -28,23 +30,21 @@ function Section({ id, title, eyebrow, children }) {
 
   return (
     <section
-      className={`reveal-section px-6 py-16 sm:px-8 sm:py-20 xl:px-10 ${isVisible ? 'is-visible' : ''}`}
+      className={cx('reveal-section relative overflow-hidden', theme.spacing.section, theme.transition.colors, toneClassName, isVisible && 'is-visible')}
       id={id}
       ref={sectionRef}
     >
-      <div className="mx-auto max-w-[90rem]">
-        {(eyebrow || title) && (
-          <div className="mb-10 max-w-3xl">
-            {eyebrow && (
-              <p className="text-sm font-medium uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
-                {eyebrow}
-              </p>
-            )}
-            {title && (
-              <h2 className="mt-2 text-3xl font-bold text-zinc-950 sm:text-4xl dark:text-zinc-50">
-                {title}
-              </h2>
-            )}
+      <div className={cx('absolute inset-0', theme.colors.background.sectionAmbient)} />
+      <div className={cx('absolute inset-x-0 top-0 h-px', theme.colors.border.sectionTop)} />
+      <div className={cx('absolute inset-x-0 bottom-0 h-px', theme.colors.border.sectionBottom)} />
+
+      <div className={cx('relative z-[1]', theme.spacing.container)}>
+        {title && (
+          <div className="mx-auto mb-10 max-w-3xl text-center">
+            <h2 className={theme.typography.heading2}>
+              {title}
+            </h2>
+            <div className={cx('mx-auto mt-3', theme.divider.sectionAccent)} />
           </div>
         )}
         {children}

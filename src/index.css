@@ -43,6 +43,10 @@ html {
   transform: translateY(0);
 }
 
+.projects-carousel-track {
+  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 @keyframes draw-name-circle {
   to {
     stroke-dashoffset: 0;
@@ -99,5 +103,9 @@ html {
   .hero-side-panel {
     opacity: 1;
     transform: none;
+  }
+
+  .projects-carousel-track {
+    transition: none !important;
   }
 }

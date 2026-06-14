@@ -1,14 +1,16 @@
+import { cx, theme } from '../../content/theme'
+
 function Table({ columns, rows, getRowKey, variant = 'default' }) {
   const variants = {
     default: {
-      wrapper: 'border-zinc-200 shadow-sm dark:border-zinc-800',
+      wrapper: cx(theme.colors.border.default, theme.shadow.card),
       head: 'bg-zinc-50 text-zinc-600 dark:bg-zinc-900 dark:text-zinc-300',
       divider: 'divide-zinc-200 dark:divide-zinc-800',
       cell: 'text-zinc-800 dark:text-zinc-300',
       row: 'hover:bg-zinc-50 dark:hover:bg-zinc-900/70',
     },
     accent: {
-      wrapper: 'border-emerald-800 shadow-[0_0_8px_rgba(6,78,59,0.35)] dark:border-emerald-600',
+      wrapper: cx('border-emerald-800 dark:border-emerald-600', theme.shadow.accent),
       head: 'bg-zinc-50 text-slate-900 dark:bg-zinc-900 dark:text-zinc-100',
       divider: 'divide-emerald-800 dark:divide-emerald-600',
       cell: 'text-slate-800 dark:text-zinc-300',
@@ -19,7 +21,7 @@ function Table({ columns, rows, getRowKey, variant = 'default' }) {
   const styles = variants[variant] ?? variants.default
 
   return (
-    <div className={`overflow-x-auto rounded-lg border bg-white transition-colors dark:bg-zinc-900 ${styles.wrapper}`}>
+    <div className={cx('overflow-x-auto rounded-lg border bg-white transition-colors dark:bg-zinc-900', styles.wrapper)}>
       <table className="w-full border-collapse text-left text-sm">
         <thead className={styles.head}>
           <tr>
