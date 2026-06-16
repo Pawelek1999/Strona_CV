@@ -111,7 +111,7 @@ function Experience({ content, tone }) {
                 {meta && <p className={cx('mt-1', theme.typography.cvMeta)}>{meta}</p>}
 
                 {row.responsibilities.length > 0 && (
-                  <ul className={cx('mt-3 list-disc space-y-2 pl-5 text-base', theme.colors.text.body)}>
+                  <ul className={cx('mt-4 list-disc space-y-2.5 pl-5 text-base leading-8 lg:text-lg lg:leading-9', theme.colors.text.body)}>
                     {row.responsibilities.map((responsibility) => (
                       <li className="pl-1" key={responsibility}>
                         {responsibility}

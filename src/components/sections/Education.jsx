@@ -66,19 +66,19 @@ function Education({ content, tone = 1 }) {
                       <dt className={theme.typography.labelAccent}>
                         {content.labels.degree}
                       </dt>
-                      <dd className="mt-1 text-base font-bold text-zinc-900 dark:text-zinc-100">{entry.degree}</dd>
+                      <dd className="mt-1 text-base font-bold text-zinc-900 lg:text-lg dark:text-zinc-100">{entry.degree}</dd>
                     </div>
                     <div className="mt-4">
                       <dt className={theme.typography.labelAccent}>
                         {content.labels.period}
                       </dt>
-                      <dd className={cx('mt-1 text-sm font-semibold', theme.colors.text.body)}>{entry.period}</dd>
+                      <dd className={cx('mt-1 text-sm font-semibold lg:text-base', theme.colors.text.body)}>{entry.period}</dd>
                     </div>
                     <div className="mt-4">
                       <dt className={theme.typography.labelAccent}>
                         {content.labels.institution}
                       </dt>
-                      <dd className={cx('mt-1 text-sm font-semibold leading-6', theme.colors.text.body)}>
+                      <dd className={cx('mt-1 text-sm font-semibold leading-6 lg:text-base lg:leading-7', theme.colors.text.body)}>
                         {entry.institution}
                       </dd>
                     </div>

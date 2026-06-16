@@ -153,8 +153,13 @@ function Projects({ content, items, tone }) {
                   href={`/projects/${project.slug}`}
                 >
                   <ProjectVisual project={project} />
+                  {project.statusLabel && (
+                    <span className={cx('mb-3 inline-flex rounded-full border border-cyan-500/30 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-cyan-700 dark:border-cyan-300/25 dark:text-cyan-300')}>
+                      {project.statusLabel}
+                    </span>
+                  )}
                   <h3 className={theme.typography.heading3}>{project.title}</h3>
-                  <p className={cx('mt-3 text-sm leading-6', theme.colors.text.muted)}>{project.shortDescription}</p>
+                  <p className={cx('mt-3 text-sm leading-6 lg:text-base lg:leading-7', theme.colors.text.muted)}>{project.shortDescription}</p>
                 </a>
               </div>
             ))}

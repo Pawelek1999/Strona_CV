@@ -30,7 +30,7 @@ function Contact({ content, tone }) {
           <p className={theme.typography.heading3}>{content.heading}</p>
           <p className={cx('mt-4', theme.typography.body)}>{content.text}</p>
 
-          <div className={cx('mt-6 grid gap-3 text-sm', theme.colors.text.body)}>
+          <div className={cx('mt-6 grid gap-3 text-sm lg:text-base', theme.colors.text.body)}>
             <div className="flex items-center gap-3">
               <span className="flex size-7 shrink-0 items-center justify-center rounded-md border border-zinc-200 bg-zinc-50 p-1.5 dark:border-zinc-700 dark:bg-white">
                 <img alt="" className="h-full w-full object-contain" src={emailIcon} />
@@ -55,7 +55,7 @@ function Contact({ content, tone }) {
                 <img alt="" className="h-full w-full object-contain" src={link.icon} />
               </div>
               <p className={cx('mt-5', theme.typography.heading3)}>{link.label}</p>
-              <p className={cx('mt-2 text-sm leading-6', theme.colors.text.muted)}>{link.description}</p>
+              <p className={cx('mt-2 text-sm leading-6 lg:text-base lg:leading-7', theme.colors.text.muted)}>{link.description}</p>
             </a>
           ))}
         </div>

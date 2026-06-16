@@ -9,7 +9,7 @@ function HeroSidePanel({ panel, className = '' }) {
       <h2 className="text-xs font-bold uppercase tracking-[0.24em] text-cyan-200">
         {panel.title}
       </h2>
-      <ul className="mt-5 space-y-3 text-sm font-semibold text-zinc-100">
+      <ul className="mt-5 space-y-3 text-sm font-semibold text-zinc-100 xl:text-base">
         {panel.items.map((item) => (
           <li
             className="flex items-center gap-3 rounded-xl border border-white/5 bg-white/[0.045] px-3 py-2.5"
@@ -75,19 +75,19 @@ function Hero({ content }) {
               <p className="text-xl font-black leading-tight text-zinc-50 sm:text-3xl lg:text-[2.35rem]">
                 {content.headline}
               </p>
-              <p className="mt-4 text-sm font-semibold leading-7 text-zinc-200 sm:text-lg sm:leading-8">
+              <p className="mt-4 text-sm font-semibold leading-7 text-zinc-200 sm:text-lg sm:leading-8 xl:text-xl xl:leading-9">
                 {content.description}
               </p>
 
               <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row md:items-start">
                 <a
-                  className="inline-flex items-center justify-center rounded-full border border-cyan-300/50 px-6 py-3 text-sm font-bold text-zinc-50 shadow-[0_0_24px_rgba(56,189,248,0.22)] transition hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-cyan-300/10 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-[#050a2d]"
+                  className="inline-flex items-center justify-center rounded-full border border-cyan-300/50 px-6 py-3 text-sm font-bold text-zinc-50 shadow-[0_0_24px_rgba(56,189,248,0.22)] transition hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-cyan-300/10 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-[#050a2d] lg:text-base"
                   href="#contact"
                 >
                   {content.cta}
                 </a>
                 <a
-                  className="inline-flex items-center justify-center rounded-full border border-cyan-300/50 px-6 py-3 text-sm font-bold text-zinc-50 shadow-[0_0_24px_rgba(56,189,248,0.22)] transition hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-cyan-300/10 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-[#050a2d]"
+                  className="inline-flex items-center justify-center rounded-full border border-cyan-300/50 px-6 py-3 text-sm font-bold text-zinc-50 shadow-[0_0_24px_rgba(56,189,248,0.22)] transition hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-cyan-300/10 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-[#050a2d] lg:text-base"
                   href="#projects"
                 >
                   {content.projectsCta}

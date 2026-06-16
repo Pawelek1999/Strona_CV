@@ -17,113 +17,127 @@ const projectVisuals = {
     'bg-[radial-gradient(circle_at_28%_28%,rgba(56,189,248,0.3),transparent_32%),radial-gradient(circle_at_74%_64%,rgba(34,211,238,0.18),transparent_32%),linear-gradient(135deg,rgba(8,13,42,0.96),rgba(15,23,42,0.98))]',
 }
 
+const projectStatusLabels = {
+  en: {
+    comingSoon: 'Coming soon',
+  },
+  pl: {
+    comingSoon: 'Coming soon',
+  },
+}
+
 export const projects = [
   {
     slug: 'portfolio',
+    status: 'comingSoon',
     image: null,
     visualClass: projectVisuals.portfolio,
     tags: ['React', 'Tailwind CSS', 'Portfolio'],
     content: {
       pl: {
-        title: 'Portfolio osobiste',
-        shortDescription: 'Responsywna strona portfolio z trybem dark mode, językami PL/EN i modularnymi sekcjami.',
+        title: 'Weather App',
+        shortDescription: 'Projekt w przygotowaniu. Szczegóły i finalna prezentacja pojawią się wkrótce.',
         description:
-          'Projekt skupiony na czytelnej prezentacji doświadczenia, edukacji, umiejętności i projektów. Strona korzysta z komponentowej struktury, trybu jasnego i ciemnego oraz przełączania języka PL/EN.',
+          'Ta sekcja jest przygotowana jako miejsce na pełny opis projektu, zakres prac, wykorzystane technologie oraz najważniejsze decyzje projektowe. Materiały zostaną uzupełnione po dopracowaniu projektu.',
         alt: 'Abstrakcyjna grafika projektu portfolio osobistego',
       },
       en: {
-        title: 'Personal portfolio',
-        shortDescription: 'A responsive portfolio website with dark mode, PL/EN language support, and modular sections.',
+        title: 'Weather App',
+        shortDescription: 'Project in progress. Details and the final presentation will appear soon.',
         description:
-          'A project focused on clearly presenting experience, education, skills, and projects. The page uses a component-based structure, light and dark mode, and PL/EN language switching.',
+          'This section is prepared for a full project description, scope of work, technologies used, and key design decisions. Materials will be completed after the project is polished.',
         alt: 'Abstract graphic for a personal portfolio project',
       },
     },
   },
   {
     slug: 'smart-home-validation',
+    status: 'comingSoon',
     image: null,
     visualClass: projectVisuals.smartHome,
     tags: ['Smart Home', 'Validation', 'Testing'],
     content: {
       pl: {
-        title: 'Walidacja Smart Home',
-        shortDescription: 'Doświadczenie w testowaniu i walidacji rozwiązań automatyki domowej.',
+        title: 'CV Creator',
+        shortDescription: 'Projekt w przygotowaniu. Szczegóły i finalna prezentacja pojawią się wkrótce.',
         description:
-          'Obszar obejmuje przygotowywanie scenariuszy testowych, analizę wymagań oraz walidację funkcjonalną urządzeń i aplikacji Smart Home.',
+          'Ta sekcja jest przygotowana jako miejsce na pełny opis projektu, zakres prac, wykorzystane technologie oraz najważniejsze decyzje projektowe. Materiały zostaną uzupełnione po dopracowaniu projektu.',
         alt: 'Abstrakcyjna grafika projektu walidacji Smart Home',
       },
       en: {
-        title: 'Smart Home validation',
-        shortDescription: 'Hands-on experience testing and validating home automation solutions.',
+        title: 'CV Creator',
+        shortDescription: 'Project in progress. Details and the final presentation will appear soon.',
         description:
-          'This area covers preparing test scenarios, analyzing requirements, and performing functional validation of Smart Home devices and applications.',
+          'This section is prepared for a full project description, scope of work, technologies used, and key design decisions. Materials will be completed after the project is polished.',
         alt: 'Abstract graphic for a Smart Home validation project',
       },
     },
   },
   {
     slug: 'learning-lab',
+    status: 'comingSoon',
     image: null,
     visualClass: projectVisuals.learningLab,
     tags: ['Frontend', 'AI', 'Learning'],
     content: {
       pl: {
-        title: 'Laboratorium nauki',
-        shortDescription: 'Miejsce na projekty frontendowe, eksperymenty z AI oraz własne narzędzia.',
+        title: 'Smart Room',
+        shortDescription: 'Projekt w przygotowaniu. Szczegóły i finalna prezentacja pojawią się wkrótce.',
         description:
-          'Przestrzeń do rozwijania umiejętności programistycznych, testowania pomysłów, pracy z narzędziami AI i budowania małych aplikacji pomocniczych.',
+          'Ta sekcja jest przygotowana jako miejsce na pełny opis projektu, zakres prac, wykorzystane technologie oraz najważniejsze decyzje projektowe. Materiały zostaną uzupełnione po dopracowaniu projektu.',
         alt: 'Abstrakcyjna grafika laboratorium nauki',
       },
       en: {
-        title: 'Learning lab',
-        shortDescription: 'A space for frontend projects, AI experiments, and personal tools.',
+        title: 'Smart Room',
+        shortDescription: 'Project in progress. Details and the final presentation will appear soon.',
         description:
-          'A space for developing programming skills, testing ideas, working with AI tools, and building small utility applications.',
+          'This section is prepared for a full project description, scope of work, technologies used, and key design decisions. Materials will be completed after the project is polished.',
         alt: 'Abstract graphic for a learning lab project',
       },
     },
   },
   {
     slug: 'dashboard-qa',
+    status: 'comingSoon',
     image: null,
     visualClass: projectVisuals.qaDashboard,
     tags: ['QA', 'Dashboard', 'Reporting'],
     content: {
       pl: {
-        title: 'Dashboard QA',
-        shortDescription: 'Panel do monitorowania jakości, testów i statusów walidacji.',
+        title: 'Camera System',
+        shortDescription: 'Projekt w przygotowaniu. Szczegóły i finalna prezentacja pojawią się wkrótce.',
         description:
-          'Koncepcja panelu zbierającego informacje o statusach testów, wynikach walidacji, ryzykach i postępie prac jakościowych w jednym czytelnym widoku.',
+          'Ta sekcja jest przygotowana jako miejsce na pełny opis projektu, zakres prac, wykorzystane technologie oraz najważniejsze decyzje projektowe. Materiały zostaną uzupełnione po dopracowaniu projektu.',
         alt: 'Abstrakcyjna grafika dashboardu QA',
       },
       en: {
-        title: 'QA Dashboard',
-        shortDescription: 'A panel for monitoring quality, tests, and validation statuses.',
+        title: 'Camera System',
+        shortDescription: 'Project in progress. Details and the final presentation will appear soon.',
         description:
-          'A concept for a panel that collects test statuses, validation results, risks, and quality progress in one readable view.',
+          'This section is prepared for a full project description, scope of work, technologies used, and key design decisions. Materials will be completed after the project is polished.',
         alt: 'Abstract graphic for a QA dashboard project',
       },
     },
   },
   {
     slug: 'test-automation',
+    status: 'comingSoon',
     image: null,
     visualClass: projectVisuals.testAutomation,
     tags: ['Automation', 'Testing', 'Reports'],
     content: {
       pl: {
-        title: 'Automatyzacja testów',
-        shortDescription: 'Przykładowy projekt automatyzacji scenariuszy testowych i raportowania wyników.',
+        title: 'Trening Agent',
+        shortDescription: 'Projekt w przygotowaniu. Szczegóły i finalna prezentacja pojawią się wkrótce.',
         description:
-          'Przykładowy projekt pokazujący podejście do automatyzacji powtarzalnych scenariuszy, generowania raportów i usprawniania procesu kontroli jakości.',
+          'Ta sekcja jest przygotowana jako miejsce na pełny opis projektu, zakres prac, wykorzystane technologie oraz najważniejsze decyzje projektowe. Materiały zostaną uzupełnione po dopracowaniu projektu.',
         alt: 'Abstrakcyjna grafika automatyzacji testów',
       },
       en: {
-        title: 'Test automation',
-        shortDescription: 'A sample project for automating test scenarios and reporting results.',
+        title: 'Trening Agent',
+        shortDescription: 'Project in progress. Details and the final presentation will appear soon.',
         description:
-          'A sample project showing an approach to automating repeatable scenarios, generating reports, and improving the quality control process.',
+          'This section is prepared for a full project description, scope of work, technologies used, and key design decisions. Materials will be completed after the project is polished.',
         alt: 'Abstract graphic for a test automation project',
       },
     },
@@ -138,6 +152,8 @@ export const getProjects = (language = 'pl') =>
       slug: project.slug,
       image: project.image,
       visualClass: project.visualClass,
+      status: project.status,
+      statusLabel: projectStatusLabels[language]?.[project.status] ?? projectStatusLabels.pl[project.status],
       tags: project.tags ?? [],
       title: localizedProject.title,
       shortDescription: localizedProject.shortDescription,

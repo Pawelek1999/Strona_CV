@@ -171,7 +171,7 @@ function Header({ forceSolid = false, homeHref = '#home', language, navItems, on
                   <div className="rounded-2xl border border-white/10 bg-[#071036]/95 p-2 shadow-[0_18px_45px_rgba(0,0,0,0.35)] backdrop-blur-xl">
                     {projectLinkItems.map((project) => (
                       <a
-                        className="block rounded-xl px-3 py-2 text-sm font-semibold text-zinc-200 transition-colors hover:bg-white/10 hover:text-cyan-200 focus:outline-none focus:ring-2 focus:ring-cyan-300"
+                        className="block rounded-xl px-3 py-2 text-sm font-semibold text-zinc-200 transition-colors hover:bg-white/10 hover:text-cyan-200 focus:outline-none focus:ring-2 focus:ring-cyan-300 xl:text-base"
                         href={project.href}
                         key={project.href}
                         onClick={() => {

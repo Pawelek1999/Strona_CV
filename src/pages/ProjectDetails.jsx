@@ -11,7 +11,7 @@ function ProjectDetails({ content, project }) {
           <p className={cx('mt-6', theme.typography.body)}>{content.notFoundText}</p>
           <a
             className={cx(
-              'mt-8 inline-flex rounded-full border px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 hover:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500',
+              'mt-8 inline-flex rounded-full border px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 hover:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 lg:text-base',
               theme.colors.border.accent,
               theme.colors.text.accentStrong
             )}
@@ -35,9 +35,14 @@ function ProjectDetails({ content, project }) {
 
           <div>
             <p className={theme.typography.eyebrowAccent}>{content.title}</p>
+            {project.statusLabel && (
+              <span className="mt-4 inline-flex rounded-full border border-cyan-500/30 px-3 py-1 text-xs font-black uppercase tracking-[0.18em] text-cyan-700 dark:border-cyan-300/25 dark:text-cyan-300">
+                {project.statusLabel}
+              </span>
+            )}
             <h1 className={cx('mt-3', theme.typography.heading2)}>{project.title}</h1>
             <div className={cx('mt-4', theme.divider.sectionAccent)} />
-            <p className={cx('mt-7 text-lg leading-8', theme.colors.text.body)}>{project.shortDescription}</p>
+            <p className={cx('mt-7 text-lg leading-8 lg:text-xl lg:leading-9', theme.colors.text.body)}>{project.shortDescription}</p>
             {project.description && <p className={cx('mt-5', theme.typography.body)}>{project.description}</p>}
             {project.tags?.length > 0 && (
               <div className="mt-6 flex flex-wrap gap-2">
@@ -50,7 +55,7 @@ function ProjectDetails({ content, project }) {
             )}
             <a
               className={cx(
-                'mt-8 inline-flex rounded-full border px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 hover:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500',
+                'mt-8 inline-flex rounded-full border px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 hover:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 lg:text-base',
                 theme.colors.border.accent,
                 theme.colors.text.accentStrong
               )}
