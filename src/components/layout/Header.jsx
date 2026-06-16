@@ -157,8 +157,8 @@ function Header({ forceSolid = false, homeHref = '#home', language, navItems, on
                   type="button"
                 >
                   {item.label}
-                  <span aria-hidden="true" className={cx('text-xs transition-transform', isProjectsOpen && 'rotate-180')}>
-                    ˅
+                  <span aria-hidden="true" className={cx('text-base font-black leading-none text-cyan-200 transition-transform xl:text-lg', isProjectsOpen && 'rotate-180')}>
+                    v
                   </span>
                 </button>
 
@@ -215,8 +215,8 @@ function Header({ forceSolid = false, homeHref = '#home', language, navItems, on
                       type="button"
                     >
                       <span>{item.label}</span>
-                      <span aria-hidden="true" className={cx('text-xs transition-transform', isMobileProjectsOpen && 'rotate-180')}>
-                        ˅
+                      <span aria-hidden="true" className={cx('text-base font-black leading-none text-cyan-200 transition-transform', isMobileProjectsOpen && 'rotate-180')}>
+                        v
                       </span>
                     </button>
                     <div

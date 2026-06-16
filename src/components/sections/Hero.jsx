@@ -37,13 +37,13 @@ function Hero({ content }) {
       <div className="absolute inset-x-0 bottom-0 h-px bg-cyan-300/30" />
 
       <div className="relative z-[1] mx-auto flex w-full max-w-[90rem] flex-col items-center justify-center text-center">
-        <h1 className="max-w-full whitespace-nowrap text-[clamp(2.65rem,10vw,4.5rem)] font-black leading-[0.95] tracking-tight text-zinc-50 lg:text-[clamp(4.75rem,6.3vw,7rem)] xl:text-[clamp(5.25rem,6.7vw,7.75rem)]">
+        <h1 className="max-w-full whitespace-normal text-[clamp(2.25rem,11.5vw,4.5rem)] font-black leading-[0.95] tracking-tight text-zinc-50 sm:whitespace-nowrap sm:text-[clamp(2.65rem,10vw,4.5rem)] lg:text-[clamp(4.75rem,6.3vw,7rem)] xl:text-[clamp(5.25rem,6.7vw,7.75rem)]">
           <span>{content.prefix} </span>
-          <span className="relative inline-block whitespace-nowrap px-2 py-2 sm:px-6">
+          <span className="relative inline-block whitespace-nowrap px-1 py-2 sm:px-6">
             {content.highlight}
             <svg
               aria-hidden="true"
-              className="hero-name-circle pointer-events-none absolute -inset-x-7 -inset-y-5 h-[calc(100%+2.5rem)] w-[calc(100%+3.5rem)] overflow-visible text-cyan-300 sm:-inset-x-10 sm:-inset-y-7 sm:h-[calc(100%+5.5rem)] sm:w-[calc(100%+6rem)]"
+              className="hero-name-circle pointer-events-none absolute -inset-x-4 -inset-y-4 h-[calc(100%+2rem)] w-[calc(100%+2rem)] overflow-visible text-cyan-300 sm:-inset-x-10 sm:-inset-y-7 sm:h-[calc(100%+5.5rem)] sm:w-[calc(100%+6rem)]"
               preserveAspectRatio="none"
               viewBox="0 0 420 170"
             >
