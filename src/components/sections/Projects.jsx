@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import Section from '../ui/Section'
 import { cx, theme } from '../../content/theme'
+import { getProjectHref } from '../../router/routes'
 
 const autoplayDelay = 4200
 
@@ -150,7 +151,7 @@ function Projects({ content, items, tone }) {
                     theme.shadow.cardHover,
                     'block h-full cursor-pointer p-7 transition hover:-translate-y-1 hover:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-transparent'
                   )}
-                  href={`/projects/${project.slug}`}
+                  href={getProjectHref(project.slug)}
                 >
                   <ProjectVisual project={project} />
                   {project.statusLabel && (

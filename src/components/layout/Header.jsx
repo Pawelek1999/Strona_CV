@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { cx, theme as styleTheme } from '../../content/theme'
+import { getProjectHref } from '../../router/routes'
 
 const languageOptions = [
   { label: 'PL', value: 'pl' },
@@ -61,7 +62,7 @@ function Header({ forceSolid = false, homeHref = '#home', language, navItems, on
   const projectNavItem = navItems.find((item) => item.href.includes('projects'))
   const projectMenuId = 'desktop-project-navigation'
   const projectLinkItems = projectLinks.map((project) => ({
-    href: `/projects/${project.slug}`,
+    href: getProjectHref(project.slug),
     label: project.title,
   }))
   const toggleMobileMenu = () => {

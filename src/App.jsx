@@ -12,6 +12,7 @@ import ProjectDetails from './pages/ProjectDetails'
 import { theme as styleTheme } from './content/theme'
 import { siteContent } from './content/siteContent'
 import { getProjectBySlug, getProjects } from './content/projects'
+import { getRoutePath, getSectionHref, stripBasePath } from './router/routes'
 import './index.css'
 
 const getInitialTheme = () => {
@@ -28,20 +29,35 @@ const getInitialTheme = () => {
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 }
 
+const getInitialPathname = () => {
+  if (typeof window === 'undefined') {
+    return '/'
+  }
+
+  const redirectPath = window.sessionStorage.getItem('spa-redirect-path')
+
+  if (!redirectPath) {
+    return window.location.pathname
+  }
+
+  window.sessionStorage.removeItem('spa-redirect-path')
+  window.history.replaceState(null, '', redirectPath)
+
+  return window.location.pathname
+}
+
 function App() {
   const [language, setLanguage] = useState('pl')
   const [theme, setTheme] = useState(getInitialTheme)
-  const [pathname, setPathname] = useState(() => (typeof window === 'undefined' ? '/' : window.location.pathname))
+  const [pathname, setPathname] = useState(getInitialPathname)
   const content = useMemo(() => siteContent[language], [language])
   const projectItems = useMemo(() => getProjects(language), [language])
   const isDark = theme === 'dark'
-  const projectSlug = pathname.match(/^\/projects\/([^/]+)\/?$/)?.[1]
+  const routePath = stripBasePath(pathname)
+  const projectSlug = routePath.match(/^\/projects\/([^/]+)\/?$/)?.[1]
   const project = projectSlug ? getProjectBySlug(projectSlug, language) : null
   const navItems = projectSlug
-    ? content.nav.map((item) => ({
-        ...item,
-        href: item.href === '#home' ? '/' : `/${item.href}`,
-      }))
+    ? content.nav.map((item) => ({ ...item, href: item.href === '#home' ? getRoutePath('/') : getSectionHref(item.href) }))
     : content.nav
 
   useEffect(() => {
@@ -63,7 +79,7 @@ function App() {
       <div className={styleTheme.components.appShell}>
         <Header
           forceSolid={Boolean(projectSlug)}
-          homeHref={projectSlug ? '/' : '#home'}
+          homeHref={projectSlug ? getRoutePath('/') : '#home'}
           language={language}
           navItems={navItems}
           onLanguageChange={setLanguage}

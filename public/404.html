@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Strona CV</title>
+    <script>
+      const basePath = '/Strona_CV'
+      const currentPath = window.location.pathname
+      const relativePath = currentPath.startsWith(basePath) ? currentPath.slice(basePath.length) : currentPath
+      const targetPath = `${basePath}/${relativePath.replace(/^\//, '')}${window.location.search}${window.location.hash}`
+
+      window.sessionStorage.setItem('spa-redirect-path', targetPath)
+      window.location.replace(`${basePath}/`)
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>

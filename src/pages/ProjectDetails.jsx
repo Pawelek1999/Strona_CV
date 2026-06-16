@@ -1,5 +1,6 @@
 import { ProjectVisual } from '../components/sections/Projects'
 import { cx, theme } from '../content/theme'
+import { getSectionHref } from '../router/routes'
 
 function ProjectDetails({ content, project }) {
   if (!project) {
@@ -15,7 +16,7 @@ function ProjectDetails({ content, project }) {
               theme.colors.border.accent,
               theme.colors.text.accentStrong
             )}
-            href="/#projects"
+            href={getSectionHref('#projects')}
           >
             {content.backLabel}
           </a>
@@ -59,7 +60,7 @@ function ProjectDetails({ content, project }) {
                 theme.colors.border.accent,
                 theme.colors.text.accentStrong
               )}
-              href="/#projects"
+              href={getSectionHref('#projects')}
             >
               {content.backLabel}
             </a>
