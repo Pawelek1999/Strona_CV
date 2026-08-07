@@ -25,6 +25,10 @@ function ProjectDetails({ content, project }) {
     )
   }
 
+  const galleryItems = project.gallery?.length > 0 ? project.gallery : project.image ? [project.image] : []
+  const isContainedImage = project.imageFit === 'contain'
+  const hasLinks = project.links?.github || project.links?.live
+
   return (
     <main className={cx('min-h-screen pt-28', theme.sectionTones[1], theme.transition.colors)}>
       <section className={cx('relative overflow-hidden', theme.spacing.sectionLarge)}>
@@ -54,6 +58,38 @@ function ProjectDetails({ content, project }) {
                 ))}
               </div>
             )}
+            {hasLinks && (
+              <div className="mt-8 flex flex-wrap gap-3">
+                {project.links.github && (
+                  <a
+                    className={cx(
+                      'inline-flex rounded-full border px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 hover:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 lg:text-base',
+                      theme.colors.border.accent,
+                      theme.colors.text.accentStrong
+                    )}
+                    href={project.links.github}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    GitHub
+                  </a>
+                )}
+                {project.links.live && (
+                  <a
+                    className={cx(
+                      'inline-flex rounded-full border px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 hover:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 lg:text-base',
+                      theme.colors.border.accent,
+                      theme.colors.text.accentStrong
+                    )}
+                    href={project.links.live}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    Live
+                  </a>
+                )}
+              </div>
+            )}
             <a
               className={cx(
                 'mt-8 inline-flex rounded-full border px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 hover:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500 lg:text-base',
@@ -67,6 +103,27 @@ function ProjectDetails({ content, project }) {
           </div>
         </div>
       </section>
+      {galleryItems.length > 1 && (
+        <section className={cx('px-6 pb-20 sm:px-8 sm:pb-24 xl:px-10', theme.sectionTones[1])}>
+          <div className={cx('grid gap-5 md:grid-cols-2', theme.spacing.container)}>
+            {galleryItems.map((image, index) => (
+              <figure
+                className={cx(
+                  'overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-900',
+                  isContainedImage && 'p-3'
+                )}
+                key={image}
+              >
+                <img
+                  alt={project.galleryAlt?.[index] ?? project.alt}
+                  className={cx('aspect-[16/10] w-full object-top', isContainedImage ? 'object-contain' : 'object-cover')}
+                  src={image}
+                />
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
     </main>
   )
 }

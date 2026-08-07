@@ -23,9 +23,22 @@ const getVisibleCount = () => {
 
 function ProjectVisual({ className, project }) {
   if (project.image) {
+    const isContained = project.imageFit === 'contain'
+
     return (
-      <div className={cx('mb-5 h-28 overflow-hidden rounded-lg border border-cyan-400/20', className)}>
-        <img alt={project.alt} className="h-full w-full object-cover" src={project.image} />
+      <div
+        className={cx(
+          'mb-5 overflow-hidden rounded-lg border border-cyan-400/20',
+          isContained && 'bg-zinc-100 p-2 dark:bg-zinc-950',
+          !className && 'h-28',
+          className
+        )}
+      >
+        <img
+          alt={project.alt}
+          className={cx('h-full w-full object-top', isContained ? 'object-contain' : 'object-cover')}
+          src={project.image}
+        />
       </div>
     )
   }
