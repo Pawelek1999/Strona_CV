@@ -119,9 +119,9 @@ export const theme = {
       'rounded-lg border border-zinc-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-cyan-500 hover:shadow-[0_0_18px_rgba(34,211,238,0.16)] dark:border-zinc-800 dark:bg-zinc-900',
     skillsCategoryHeader:
       'border-b border-cyan-500/30 pb-4 text-lg font-black tracking-[0.06em] text-cyan-700 lg:text-xl dark:border-cyan-300/25 dark:text-cyan-300',
-    skillsCategoryList: 'mt-5 grid gap-3',
+    skillsCategoryList: 'mt-5 flex flex-wrap gap-2',
     skillsCategoryItem:
-      'rounded-md border border-zinc-200 bg-zinc-50/80 px-3 py-2 text-sm font-semibold leading-6 text-zinc-700 lg:text-base lg:leading-7 dark:border-white/10 dark:bg-white/[0.045] dark:text-zinc-200',
+      'rounded-full border border-zinc-200 bg-zinc-50/80 px-3 py-1.5 text-xs font-semibold leading-5 text-zinc-700 transition hover:border-cyan-500/60 hover:bg-cyan-50 hover:text-cyan-800 lg:text-sm dark:border-white/10 dark:bg-white/[0.045] dark:text-zinc-200 dark:hover:border-cyan-300/40 dark:hover:bg-cyan-300/10 dark:hover:text-cyan-200',
     tag: 'rounded-md bg-zinc-100 px-3 py-1 text-sm font-medium text-zinc-700 lg:text-base',
   },
 }

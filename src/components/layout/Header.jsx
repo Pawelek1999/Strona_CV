@@ -52,6 +52,20 @@ function ThemeSwitch({ isDark, onThemeToggle }) {
   )
 }
 
+function NavChevron({ isOpen }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={cx(
+        'grid size-5 place-items-center rounded-full border border-cyan-300/20 bg-cyan-300/10 text-cyan-100/90 transition duration-300',
+        isOpen && 'rotate-180 border-cyan-200/45 bg-cyan-300/20 text-white'
+      )}
+    >
+      <span className="h-1.5 w-1.5 rotate-45 border-b-2 border-r-2 border-current" />
+    </span>
+  )
+}
+
 function Header({ forceSolid = false, homeHref = '#home', language, navItems, onLanguageChange, onThemeToggle, projectLinks = [], theme }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isProjectsOpen, setIsProjectsOpen] = useState(false)
@@ -149,7 +163,7 @@ function Header({ forceSolid = false, homeHref = '#home', language, navItems, on
                 <button
                   aria-controls={projectMenuId}
                   aria-expanded={isProjectsOpen}
-                  className={cx(styleTheme.components.headerNavLink, 'inline-flex items-center gap-1 focus:outline-none focus:text-white')}
+                  className={cx(styleTheme.components.headerNavLink, 'inline-flex items-center gap-1.5 focus:outline-none focus:text-white')}
                   onClick={() => {
                     setIsProjectsPinned((currentValue) => !currentValue)
                     setIsProjectsOpen((currentValue) => !currentValue || !isProjectsPinned)
@@ -157,9 +171,7 @@ function Header({ forceSolid = false, homeHref = '#home', language, navItems, on
                   type="button"
                 >
                   {item.label}
-                  <span aria-hidden="true" className={cx('text-base font-black leading-none text-cyan-200 transition-transform xl:text-lg', isProjectsOpen && 'rotate-180')}>
-                    v
-                  </span>
+                  <NavChevron isOpen={isProjectsOpen} />
                 </button>
 
                 <div
@@ -215,9 +227,7 @@ function Header({ forceSolid = false, homeHref = '#home', language, navItems, on
                       type="button"
                     >
                       <span>{item.label}</span>
-                      <span aria-hidden="true" className={cx('text-base font-black leading-none text-cyan-200 transition-transform', isMobileProjectsOpen && 'rotate-180')}>
-                        v
-                      </span>
+                      <NavChevron isOpen={isMobileProjectsOpen} />
                     </button>
                     <div
                       aria-label={projectNavItem?.label}

@@ -71,7 +71,7 @@ function Hero({ content }) {
               />
             </div>
 
-            <div className="mx-auto max-w-[38rem] overflow-hidden px-1 text-center md:mx-0 md:text-left">
+            <div className="mx-auto max-w-[38rem] overflow-visible px-1 text-center md:mx-0 md:text-left">
               <p className="text-xl font-black leading-tight text-zinc-50 sm:text-3xl lg:text-[2.35rem]">
                 {content.headline}
               </p>
@@ -79,7 +79,7 @@ function Hero({ content }) {
                 {content.description}
               </p>
 
-              <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row md:items-start">
+              <div className="-mx-4 -my-3 mt-4 flex flex-col items-center gap-3 px-4 py-3 sm:flex-row md:items-start">
                 <a
                   className="inline-flex items-center justify-center rounded-full border border-cyan-300/50 px-6 py-3 text-sm font-bold text-zinc-50 shadow-[0_0_24px_rgba(56,189,248,0.22)] transition hover:-translate-y-0.5 hover:border-cyan-200 hover:bg-cyan-300/10 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-[#050a2d] lg:text-base"
                   href="#contact"

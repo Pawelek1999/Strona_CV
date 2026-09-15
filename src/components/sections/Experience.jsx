@@ -98,8 +98,9 @@ function Experience({ content, tone }) {
 
   return (
     <Section id="experience" title={content.title} tone={tone}>
-      <div className="mx-auto max-w-4xl">
-        <div className="space-y-12">
+      <div className="mx-auto max-w-5xl">
+        <div className="relative space-y-7 md:pl-8">
+          <div className="absolute bottom-8 left-3 top-8 hidden w-px bg-gradient-to-b from-cyan-500/0 via-cyan-500/35 to-cyan-500/0 md:block" />
           {content.rows.map((row) => {
             const { company, title } = parseRole(row.role)
             const duration = getDuration(row.period, language)

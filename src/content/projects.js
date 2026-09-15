@@ -1,5 +1,6 @@
 import cameraSystem from './projects/cameraSystem'
 import cvCreator from './projects/cvCreator'
+import emcTestAutomation from './projects/emcTestAutomation'
 import ragModel from './projects/ragModel'
 import weatherApp from './projects/weatherApp'
 
@@ -18,7 +19,7 @@ const projectStatusLabels = {
   },
 }
 
-export const projects = [cvCreator, ragModel, weatherApp, cameraSystem]
+export const projects = [emcTestAutomation, cvCreator, ragModel, weatherApp, cameraSystem]
 
 export const getProjects = (language = 'pl') =>
   projects.map((project) => {

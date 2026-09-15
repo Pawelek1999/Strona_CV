@@ -30,7 +30,7 @@ function Section({ id, title, children, tone = 1 }) {
 
   return (
     <section
-      className={cx('reveal-section relative overflow-hidden', theme.spacing.section, theme.transition.colors, toneClassName, isVisible && 'is-visible')}
+      className={cx('reveal-section relative scroll-mt-24 overflow-hidden', theme.spacing.section, theme.transition.colors, toneClassName, isVisible && 'is-visible')}
       id={id}
       ref={sectionRef}
     >
