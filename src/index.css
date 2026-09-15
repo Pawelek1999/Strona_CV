@@ -6,13 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.hero-name-circle path {
-  stroke-dasharray: 1040;
-  stroke-dashoffset: 1040;
-  animation: draw-name-circle 2.15s cubic-bezier(0.65, 0, 0.16, 1) 0.45s forwards;
-  filter: drop-shadow(0 0 14px rgba(103, 232, 249, 0.38));
-}
-
 .hero-side-panel {
   opacity: 1;
   animation-duration: 900ms;
@@ -45,12 +38,6 @@ html {
 
 .projects-carousel-track {
   transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-@keyframes draw-name-circle {
-  to {
-    stroke-dashoffset: 0;
-  }
 }
 
 @keyframes hero-panel-from-left {
@@ -89,10 +76,6 @@ html {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 1ms !important;
-  }
-
-  .hero-name-circle path {
-    stroke-dashoffset: 0;
   }
 
   .reveal-section {

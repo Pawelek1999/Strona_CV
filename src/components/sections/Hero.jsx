@@ -41,21 +41,6 @@ function Hero({ content }) {
           <span>{content.prefix} </span>
           <span className="relative inline-block whitespace-nowrap px-1 py-2 sm:px-6">
             {content.highlight}
-            <svg
-              aria-hidden="true"
-              className="hero-name-circle pointer-events-none absolute -inset-x-4 -inset-y-4 h-[calc(100%+2rem)] w-[calc(100%+2rem)] overflow-visible text-cyan-300 sm:-inset-x-10 sm:-inset-y-7 sm:h-[calc(100%+5.5rem)] sm:w-[calc(100%+6rem)]"
-              preserveAspectRatio="none"
-              viewBox="0 0 420 170"
-            >
-              <path
-                d="M34 94C44 31 137 13 231 20C344 29 407 72 382 113C351 164 197 159 100 136C43 122 19 103 34 94Z"
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="5"
-              />
-            </svg>
           </span>
         </h1>
 

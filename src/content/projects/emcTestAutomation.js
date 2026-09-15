@@ -9,7 +9,7 @@ const emcTestAutomation = {
   tags: ['Python', 'FastAPI', 'pytest', 'React', 'Vitest', 'Docusaurus'],
   content: {
     pl: {
-      title: 'Automatyzacja testów EMC',
+      title: 'Sensitivity Test',
       shortDescription:
         'Automatyzacja czasochlonnego testu EMC weryfikujacego odbior sygnalu radiowego przez silnik, integrujaca warstwe software z rzeczywistym sprzetem pomiarowym.',
       description:
@@ -18,7 +18,7 @@ const emcTestAutomation = {
       galleryAlt: ['Stanowisko pomiarowe EMC w komorze bezechowej z anteną i osłonami absorpcyjnymi'],
     },
     en: {
-      title: 'EMC Test Automation',
+      title: 'Sensitivity Test',
       shortDescription:
         'Automating a time-consuming EMC test that verifies radio signal reception by a motor, integrating the software layer with real measurement hardware.',
       description:

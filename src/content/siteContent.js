@@ -6,7 +6,7 @@ export const siteContent = {
       { label: 'Doświadczenie', href: '#experience' },
       { label: 'Edukacja', href: '#education' },
       { label: 'Umiejętności', href: '#skills' },
-      { label: 'Projekty', href: '#projects' },
+      { label: 'Case Studies', href: '#projects' },
       { label: 'Kontakt', href: '#contact' },
     ],
     hero: {
@@ -44,13 +44,9 @@ export const siteContent = {
       title: 'O mnie',
       cardTitle: 'Od walidacji do własnych aplikacji',
       imageAlt: 'Portret Jakuba Pawełka',
-      text: `Jestem Inżynierem ds. Walidacji Oprogramowania z ponad trzyletnim doświadczeniem w testowaniu funkcjonalnym i walidacji systemów Smart Home w Somfy Group. Odpowiadam za opracowywanie modułów testowych, scenariuszy i przypadków testowych dla napędów, pilotów i aplikacji SmartHome, a także za określanie planów walidacji zgodnych ze specyfikacją — co przekłada się na wyższą jakość produktu wykrywaną jeszcze przed wdrożeniem. Ściśle współpracuję z laboratorium mechanicznym, działem testów EMC oraz zespołami deweloperskimi, prowadząc spotkania projektowe i przeglądy, co pozwoliło mi dogłębnie poznać cykl życia produktu i procesy deweloperskie.
+      text: `Jestem Inżynierem ds. Walidacji Oprogramowania z ponad dwuletnim doświadczeniem w testowaniu funkcjonalnym oraz walidacji systemów. Dotychczas pracowałem przy weryfikacji systemów Smart Home dla automatyki domowej, co pozwoliło mi zdobyć praktyczną wiedzę z zakresu jakości oprogramowania, cyklu życia produktu oraz procesów deweloperskich.
 
-Aktywnie optymalizuję procesy testowe poprzez automatyzację, zaprojektowałem i wdrożyłem rozwiązanie automatyzujące test EMC (integracja software-hardware w Python/FastAPI + React), skracając czas jego wykonania z ok. 4 godzin do 30 minut, bez konieczności stałej obecności pracownika przy stanowisku. Wdrażam też rozwiązania oparte na AI usprawniające codzienną pracę zespołu.
-
-Równolegle rozwijam się w kierunku tworzenia oprogramowania, realizując własne projekty. Obecnie pracuję nad aplikacją mobilną dla instalatorów firmy fotowoltaicznej, która pozwoli monitorować czas pracy, tworzyć raporty z montażu oraz podpisywać protokół odbioru — cyfryzując proces dotychczas oparty na dokumentacji papierowej. Dzięki tym projektom pogłębiam wiedzę z zakresu projektowania systemów, dobrych praktyk programistycznych i pracy z nowoczesnym stosem technologicznym.
-
-Prywatnie stawiam na aktywność fizyczną — trenuję brazylijskie Ju-Jitsu i obecnie przygotowuję się do maratonu.`,
+Obecnie rozwijam się w kierunku tworzenia oprogramowania, realizując własne projekty i pogłębiając wiedzę z zakresu projektowania, implementacji oraz dobrych praktyk programistycznych.`,
     },
     experience: {
       title: 'Doświadczenie',
@@ -169,7 +165,7 @@ Prywatnie stawiam na aktywność fizyczną — trenuję brazylijskie Ju-Jitsu i 
     },
     projects: {
       eyebrow: 'Praca',
-      title: 'Projekty',
+      title: 'Case Studies',
       sectionLinkLabel: 'Przejdź do sekcji',
       backLabel: 'Wróć do projektów',
       previousLabel: 'Poprzednie projekty',
@@ -206,7 +202,7 @@ Prywatnie stawiam na aktywność fizyczną — trenuję brazylijskie Ju-Jitsu i 
       { label: 'Experience', href: '#experience' },
       { label: 'Education', href: '#education' },
       { label: 'Skills', href: '#skills' },
-      { label: 'Projects', href: '#projects' },
+      { label: 'Case Studies', href: '#projects' },
       { label: 'Contact', href: '#contact' },
     ],
     hero: {
@@ -369,7 +365,7 @@ Privately, I focus on physical activity. I train Brazilian Jiu-Jitsu and am curr
     },
     projects: {
       eyebrow: 'Work',
-      title: 'Projects',
+      title: 'Case Studies',
       sectionLinkLabel: 'Go to section',
       backLabel: 'Back to projects',
       previousLabel: 'Previous projects',
