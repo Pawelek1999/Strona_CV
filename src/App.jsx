@@ -85,6 +85,7 @@ function App() {
           onLanguageChange={setLanguage}
           onThemeToggle={() => setTheme((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'))}
           projectLinks={projectItems}
+          projectSectionLinkLabel={content.projects.sectionLinkLabel}
           theme={theme}
         />
         {projectSlug ? (

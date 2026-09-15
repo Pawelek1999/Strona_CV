@@ -170,6 +170,7 @@ Prywatnie stawiam na aktywność fizyczną — trenuję brazylijskie Ju-Jitsu i 
     projects: {
       eyebrow: 'Praca',
       title: 'Projekty',
+      sectionLinkLabel: 'Przejdź do sekcji',
       backLabel: 'Wróć do projektów',
       previousLabel: 'Poprzednie projekty',
       nextLabel: 'Następne projekty',
@@ -369,6 +370,7 @@ Privately, I focus on physical activity. I train Brazilian Jiu-Jitsu and am curr
     projects: {
       eyebrow: 'Work',
       title: 'Projects',
+      sectionLinkLabel: 'Go to section',
       backLabel: 'Back to projects',
       previousLabel: 'Previous projects',
       nextLabel: 'Next projects',

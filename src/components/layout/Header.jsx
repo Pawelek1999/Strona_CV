@@ -66,7 +66,17 @@ function NavChevron({ isOpen }) {
   )
 }
 
-function Header({ forceSolid = false, homeHref = '#home', language, navItems, onLanguageChange, onThemeToggle, projectLinks = [], theme }) {
+function Header({
+  forceSolid = false,
+  homeHref = '#home',
+  language,
+  navItems,
+  onLanguageChange,
+  onThemeToggle,
+  projectLinks = [],
+  projectSectionLinkLabel,
+  theme,
+}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isProjectsOpen, setIsProjectsOpen] = useState(false)
   const [isProjectsPinned, setIsProjectsPinned] = useState(false)
@@ -234,6 +244,16 @@ function Header({ forceSolid = false, homeHref = '#home', language, navItems, on
                       className={cx('grid gap-1 pl-3', isMobileProjectsOpen ? 'grid' : 'hidden')}
                       id="mobile-project-navigation"
                     >
+                      <a
+                        className="rounded-xl px-3 py-2 text-xs font-semibold text-zinc-300 transition-colors hover:bg-white/10 hover:text-cyan-200 focus:outline-none focus:ring-2 focus:ring-cyan-300"
+                        href={item.href}
+                        onClick={() => {
+                          setIsMenuOpen(false)
+                          setIsMobileProjectsOpen(false)
+                        }}
+                      >
+                        {projectSectionLinkLabel ?? item.label}
+                      </a>
                       {projectLinkItems.map((project) => (
                         <a
                           className="rounded-xl px-3 py-2 text-xs font-semibold text-zinc-300 transition-colors hover:bg-white/10 hover:text-cyan-200 focus:outline-none focus:ring-2 focus:ring-cyan-300"
